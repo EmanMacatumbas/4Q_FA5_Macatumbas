@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var numnum = prompt("Enter a number: ")
+
+    while(isNaN(numnum)){
+        numnum = prompt("Enter a number: ")
+    }
+
+    document.write("Inputted number: "+numnum+"<br>")
+    
+    var oddoreven = numnum % 2;
+    var counter1 = numnum;
+    
+
+    if(oddoreven==1){
+
+        while(counter1>0){
+            document.write("<br>");
+            var counter2 = numnum;
+
+            while(counter2>0){
+                document.write(counter1+" ");
+                counter2--;
+            }
+            counter1--;
+        }
+
+    }
+    if(oddoreven==0){
+
+        while(counter1>0){
+        document.write("<br>");
+        var counter2 = counter1;
+        while(counter2>0){
+                document.write(counter1+" ");
+                counter2--;
+            }
+        counter1--;
+        }
+
+    }
+
+</script>
+</html>

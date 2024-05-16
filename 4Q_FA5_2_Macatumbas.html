@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+        <input type="text" id="contactname" name="contactname">
+        <input type="button" value="Add" onclick="addclick()">
+        <input type="button" value="Remove" onclick="removeclick()">
+
+    </form>
+    <p id="contacts"></p>
+
+</body>
+<script>
+
+    var contactlist = [];
+    var y=0
+
+    function addclick(){
+        y++;
+        fullcontacts();
+        var x = document.getElementById("contactname").value;
+        contactlist.push(x); 
+        shownames();
+    }
+    function shownames(){
+        document.getElementById("contacts").innerHTML=contactlist;
+    }
+    function fullcontacts(){
+        if(y>7){
+            contactlist.shift();
+        }
+    }
+    function removeclick(){
+        contactlist.pop();
+        shownames();
+    }
+
+</script>
+</html>
